@@ -5,7 +5,7 @@ import resume from "./files/KeenWilson_SoftwareEngineer_Jan2022.pdf";
 function LandingPage() {
   console.log("LandingPage is loaded");
   return (
-    <div class="relative bg-white overflow-hidden">
+    <div class="relative bg-stone-100 overflow-hidden">
       <div class="max-w-7xl mx-auto">
         <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div className="sm:text-center lg:text-left">

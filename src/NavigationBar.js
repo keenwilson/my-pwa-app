@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./images/kw_elegant_transparent_500x500.svg";
 
 function NavigationBar(params) {
@@ -62,34 +63,31 @@ function NavigationBar(params) {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <a href="#">
+              <Link to="/">
                 <span className="sr-only">Keen Wilson Logo</span>
                 <img alt="" className="h-8 w-auto sm:h-10" src={logo} />
-              </a>
+              </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
-              <div className="flex space-x-4">
-                <a
-                  href="#"
-                  className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all"
-                  aria-current="page"
-                >
-                  Featured Projects
-                </a>
-
-                <a
-                  href="#"
-                  className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all"
-                >
-                  Tech Experiences
-                </a>
-
-                <a
-                  href="#"
-                  className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all"
-                >
-                  Get in touch
-                </a>
+              <div className="h-16 flex justify-start items-center space-x-4">
+                <Link to="/projects">
+                  <span
+                    className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all"
+                    aria-current="page"
+                  >
+                    Featured Projects
+                  </span>
+                </Link>
+                <Link to="/techstack">
+                  <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
+                    Tech Experiences
+                  </span>
+                </Link>
+                <Link to="/contact">
+                  <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
+                    Get in touch
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

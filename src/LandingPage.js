@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import resume from "./files/KeenWilson_SoftwareEngineer_Jan2022.pdf";
 
 function LandingPage() {
@@ -26,12 +27,11 @@ function LandingPage() {
             </p>
             <div className="mt-5 mb-5 sm:mt-8 sm:mb-8 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-stone-600 hover:bg-stone-700 md:py-4 md:text-lg md:px-10"
-                >
-                  View Current Projects
-                </a>
+                <Link to="/projects">
+                  <span className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-stone-600 hover:bg-stone-700 md:py-4 md:text-lg md:px-10">
+                    View Current Projects
+                  </span>
+                </Link>
               </div>
               <div className="mt-3 sm:mt-0 sm:ml-3">
                 <a

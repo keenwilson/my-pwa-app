@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LandingPage from "./LandingPage";
 import NavBar from "./NavBar";
@@ -14,7 +14,9 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route path="/experiences" element={<TechStack />} />
+        <Route path="/projects" element={<TechStack title={"Projects"} />} />
+        <Route path="/techstack" element={<TechStack title={"Tech Stack"} />} />
+        <Route path="/contact" element={<TechStack title={"Get in touch"} />} />
       </Routes>
     </BrowserRouter>
   );

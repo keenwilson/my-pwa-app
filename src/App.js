@@ -16,7 +16,10 @@ function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route path="/projects" element={<TechStack title={"Projects"} />} />
         <Route path="/techstack" element={<TechStack title={"Tech Stack"} />} />
-        <Route path="/contact" element={<Contact title={"Time to chat?"} />} />
+        <Route
+          path="/contact"
+          element={<Contact title={"Time to Collaborate?"} />}
+        />
       </Routes>
     </BrowserRouter>
   );

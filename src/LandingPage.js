@@ -30,7 +30,7 @@ function LandingPage() {
                 <div className="rounded-md shadow">
                   <Link to="/projects">
                     <span className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-stone-600 hover:bg-stone-700 md:py-4 md:text-lg md:px-10">
-                      View Passion Projects
+                      View Projects
                     </span>
                   </Link>
                 </div>
@@ -41,7 +41,7 @@ function LandingPage() {
                     rel="noreferrer"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-stone-700 bg-stone-200 hover:bg-stone-300 md:py-4 md:text-lg md:px-10"
                   >
-                    View Resume
+                    Download Resume
                   </a>
                 </div>
               </div>
@@ -66,15 +66,16 @@ function LandingPage() {
               Tools I Have Been Working With
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              The combination of technologies I have used in a team setting to
-              build, run, and monitor production-level applications.
+              The combination of technologies I have professionally used in a
+              team setting to build, run, and monitor production-level
+              applications.
             </p>
           </div>
           <div className="mt-5 mb-5 sm:mt-8 sm:mb-8 sm:flex sm:justify-start lg:justify-center">
             <div className="rounded-md shadow">
               <Link to="/techstack">
                 <span className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-stone-600 hover:bg-stone-700 md:py-4 md:text-lg md:px-10">
-                  View Tech Experiences
+                  Check it out
                 </span>
               </Link>
             </div>

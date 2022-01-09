@@ -3,7 +3,9 @@ import IconCode from "./IconCode";
 import IconDesktop from "./IconDesktop";
 import IconError from "./IconError";
 import IconQuestion from "./IconQuestion";
+import IconUp from "./IconUp";
 import IconX from "./IconX";
+import ScrollButton from "./ScrollButton";
 import Spin from "./Spin";
 
 export {
@@ -12,6 +14,8 @@ export {
   IconDesktop,
   IconError,
   IconQuestion,
+  IconUp,
   IconX,
+  ScrollButton,
   Spin,
 };

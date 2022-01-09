@@ -106,18 +106,12 @@ function NavigationBar(params) {
               </span>
             </Link>
             <Link to="/projects">
-              <span
-                className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-               
-              >
+              <span className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Featured Projects
               </span>
             </Link>
             <Link to="/contact">
-              <span
-                
-                className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
+              <span className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Get in touch
               </span>
             </Link>

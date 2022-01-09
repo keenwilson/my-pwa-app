@@ -16,12 +16,12 @@ function TechStack({ title }) {
     {
       key: "frontend3",
       title: "LESS",
-      category: "Front End",
+      category: "CSS Pre-processors",
     },
     {
       key: "frontend4",
       title: "SASS",
-      category: "Front End",
+      category: "CSS Pre-processors",
     },
     {
       key: "frontend5",
@@ -31,17 +31,52 @@ function TechStack({ title }) {
     {
       key: "frontend6",
       title: "React Js",
-      category: "Front End",
+      category: "JavaScript Framework",
     },
     {
       key: "frontend7",
       title: "Jest",
-      category: "Front End",
+      category: "Test Automation",
     },
     {
       key: "frontend8",
       title: "Enzyme",
-      category: "Front End",
+      category: "Test Automation",
+    },
+    {
+      key: "frontend9",
+      title: "Selenium",
+      category: "Test Automation",
+    },
+    {
+      key: "frontend10",
+      title: "XSS",
+      category: "Web Security",
+    },
+    {
+      key: "frontend11",
+      title: "CSRF",
+      category: "Web Security",
+    },
+    {
+      key: "frontend12",
+      title: "CORS",
+      category: "Web Security",
+    },
+    {
+      key: "frontend10",
+      title: "Grunt",
+      category: "Build Tool",
+    },
+    {
+      key: "frontend11",
+      title: "Webpack",
+      category: "Build Tool",
+    },
+    {
+      key: "frontend12",
+      title: "Git",
+      category: "Version Control",
     },
   ];
 
@@ -116,6 +151,21 @@ function TechStack({ title }) {
       title: "AWS CloudWatch",
       category: "Monitoring",
     },
+    {
+      key: "Backend17",
+      title: "Elastic APM",
+      category: "Monitoring",
+    },
+    {
+      key: "Backend18",
+      title: "AWS Cognito",
+      category: "Access Control",
+    },
+    {
+      key: "Backend19",
+      title: "AWS Route53",
+      category: "Domain Name System (DNS)",
+    },
   ];
 
   const databaseTechStackData = [
@@ -142,7 +192,7 @@ function TechStack({ title }) {
     {
       key: "database4",
       title: "Aws Glue",
-      category: "Data ETL - extract, transform, load",
+      category: "Data Integration",
     },
     {
       key: "database5",

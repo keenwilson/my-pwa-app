@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import TechList from "./components/TechList";
 
 function TechStack({ title }) {
-  
   const frontEndtechStackData = [
     {
       key: "frontend1",
@@ -157,45 +156,52 @@ function TechStack({ title }) {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [filterText, setFilterText] = useState("");
-  const [filteredFrontEnd, setFilteredFrontEnd] = useState(frontEndtechStackData)
-  const [filteredBackEnd, setFilteredBackEnd] = useState(backEndTechStackData)
-  const [filteredDatabase, setFilteredDatabase] = useState(databaseTechStackData)
-  
+  const [filteredFrontEnd, setFilteredFrontEnd] = useState(
+    frontEndtechStackData
+  );
+  const [filteredBackEnd, setFilteredBackEnd] = useState(backEndTechStackData);
+  const [filteredDatabase, setFilteredDatabase] = useState(
+    databaseTechStackData
+  );
+
   const handleFilterTextChange = (e) => {
-    const newFilterText = e.target.value.toLocaleLowerCase()
-    console.log("newFilterText", newFilterText)
-    setFilterText(newFilterText)
+    const newFilterText = e.target.value.toLocaleLowerCase();
+    console.log("newFilterText", newFilterText);
+    setFilterText(newFilterText);
 
     const filteredFrontEndItems = frontEndtechStackData.filter(
-      item =>
+      (item) =>
         item.title.toLocaleLowerCase().includes(newFilterText) ||
         item.category.toLocaleLowerCase().includes(newFilterText)
     );
-    setFilteredFrontEnd(filteredFrontEndItems)
+    setFilteredFrontEnd(filteredFrontEndItems);
 
     const filteredBackEndItems = backEndTechStackData.filter(
-      item =>
+      (item) =>
         item.title.toLocaleLowerCase().includes(newFilterText) ||
         item.category.toLocaleLowerCase().includes(newFilterText)
     );
-    setFilteredBackEnd(filteredBackEndItems)
+    setFilteredBackEnd(filteredBackEndItems);
 
     const filteredDatabaseItems = databaseTechStackData.filter(
-      item =>
+      (item) =>
         item.title.toLocaleLowerCase().includes(newFilterText) ||
         item.category.toLocaleLowerCase().includes(newFilterText)
     );
-    setFilteredDatabase(filteredDatabaseItems)
+    setFilteredDatabase(filteredDatabaseItems);
 
     // if (newFilterText === "" || newFilterText.length === 0) {
     //   setFilteredFrontEnd(frontEndtechStackData)
     //   setFilteredBackEnd(backEndTechStackData)
     //   setFilteredDatabase(databaseTechStackData)
     // }
-  }
+  };
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12 bg-stone-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base text-stone-600 font-semibold tracking-wide uppercase">
@@ -210,7 +216,7 @@ function TechStack({ title }) {
           </p>
         </div>
 
-        <div className="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
+        <div className="bg-stone-100 space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
           <form className="group relative">
             <svg
               width="20"
@@ -235,9 +241,9 @@ function TechStack({ title }) {
           </form>
           <div class="grid md:grid lg:grid-cols-4 md:grid-cols-3 md:gap-x-8 md:gap-y-10 xs:grid-cols-1 sm:grid-cols-1 gap-4">
             <div class="...">
-            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
-            Front End
-          </p>
+              <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+                Front End
+              </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 md:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
                 {filteredFrontEnd.map((item, i) => {
                   return (
@@ -251,9 +257,9 @@ function TechStack({ title }) {
               </dl>
             </div>
             <div class="... lg:col-span-2">
-            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
-            Back End
-          </p>
+              <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+                Back End
+              </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-3 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
                 {filteredBackEnd.map((item, i) => {
                   return (
@@ -267,9 +273,9 @@ function TechStack({ title }) {
               </dl>
             </div>
             <div class="...">
-            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
-            Data Management
-          </p>
+              <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+                Data Management
+              </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
                 {filteredDatabase.map((item, i) => {
                   return (
@@ -284,8 +290,6 @@ function TechStack({ title }) {
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

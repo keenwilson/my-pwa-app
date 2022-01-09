@@ -139,12 +139,12 @@ function TechStack({ title }) {
     {
       key: "Backend14",
       title: "AWS SQS",
-      category: "App Integration",
+      category: "Event-driven App Integration",
     },
     {
       key: "Backend15",
       title: "AWS SNS",
-      category: "App Integration",
+      category: "Event-driven App Integration",
     },
     {
       key: "Backend16",
@@ -165,6 +165,16 @@ function TechStack({ title }) {
       key: "Backend19",
       title: "AWS Route53",
       category: "Domain Name System (DNS)",
+    },
+    {
+      key: "Backend20",
+      title: "Docker",
+      category: "Containerization",
+    },
+    {
+      key: "Backend21",
+      title: "Kubernetes",
+      category: "Containerization",
     },
   ];
 

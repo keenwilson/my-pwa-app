@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import TechList from "./components/TechList";
 
 function TechStack({ title }) {
+  
   const frontEndtechStackData = [
     {
       key: "frontend1",
@@ -97,22 +98,22 @@ function TechStack({ title }) {
       category: "Event-driven Compute",
     },
     {
-      key: "Backend12",
+      key: "Backend13",
       title: "AWS SES",
       category: "Email Service",
     },
     {
-      key: "Backend12",
+      key: "Backend14",
       title: "AWS SQS",
       category: "App Integration",
     },
     {
-      key: "Backend12",
+      key: "Backend15",
       title: "AWS SNS",
       category: "App Integration",
     },
     {
-      key: "Backend12",
+      key: "Backend16",
       title: "AWS CloudWatch",
       category: "Monitoring",
     },
@@ -155,6 +156,44 @@ function TechStack({ title }) {
       category: "Big Data Processor",
     },
   ];
+
+  const [filterText, setFilterText] = useState("");
+  const [filteredFrontEnd, setFilteredFrontEnd] = useState(frontEndtechStackData)
+  const [filteredBackEnd, setFilteredBackEnd] = useState(backEndTechStackData)
+  const [filteredDatabase, setFilteredDatabase] = useState(databaseTechStackData)
+  
+  const handleFilterTextChange = (e) => {
+    const newFilterText = e.target.value.toLocaleLowerCase()
+    console.log("newFilterText", newFilterText)
+    setFilterText(newFilterText)
+
+    const filteredFrontEndItems = frontEndtechStackData.filter(
+      item =>
+        item.title.toLocaleLowerCase().includes(newFilterText) ||
+        item.category.toLocaleLowerCase().includes(newFilterText)
+    );
+    setFilteredFrontEnd(filteredFrontEndItems)
+
+    const filteredBackEndItems = backEndTechStackData.filter(
+      item =>
+        item.title.toLocaleLowerCase().includes(newFilterText) ||
+        item.category.toLocaleLowerCase().includes(newFilterText)
+    );
+    setFilteredBackEnd(filteredBackEndItems)
+
+    const filteredDatabaseItems = databaseTechStackData.filter(
+      item =>
+        item.title.toLocaleLowerCase().includes(newFilterText) ||
+        item.category.toLocaleLowerCase().includes(newFilterText)
+    );
+    setFilteredDatabase(filteredDatabaseItems)
+
+    // if (newFilterText === "" || newFilterText.length === 0) {
+    //   setFilteredFrontEnd(frontEndtechStackData)
+    //   setFilteredBackEnd(backEndTechStackData)
+    //   setFilteredDatabase(databaseTechStackData)
+    // }
+  }
   return (
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,6 +230,7 @@ function TechStack({ title }) {
               type="text"
               aria-label="Filter tools"
               placeholder="Filter tools..."
+              onChange={handleFilterTextChange}
             />
           </form>
           <div class="grid md:grid lg:grid-cols-4 md:grid-cols-3 md:gap-x-8 md:gap-y-10 xs:grid-cols-1 sm:grid-cols-1 gap-4">
@@ -199,7 +239,7 @@ function TechStack({ title }) {
             Front End
           </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 md:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
-                {frontEndtechStackData.map((item, i) => {
+                {filteredFrontEnd.map((item, i) => {
                   return (
                     <TechList
                       key={item.key}
@@ -215,7 +255,7 @@ function TechStack({ title }) {
             Back End
           </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-3 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
-                {backEndTechStackData.map((item, i) => {
+                {filteredBackEnd.map((item, i) => {
                   return (
                     <TechList
                       key={item.key}
@@ -231,7 +271,7 @@ function TechStack({ title }) {
             Data Management
           </p>
               <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
-                {databaseTechStackData.map((item, i) => {
+                {filteredDatabase.map((item, i) => {
                   return (
                     <TechList
                       key={item.key}

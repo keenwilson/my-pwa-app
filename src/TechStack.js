@@ -1,6 +1,160 @@
 import React from "react";
+import TechList from "./components/TechList";
 
 function TechStack({ title }) {
+  const frontEndtechStackData = [
+    {
+      key: "frontend1",
+      title: "HTML",
+      category: "Front End",
+    },
+    {
+      key: "frontend2",
+      title: "CSS",
+      category: "Front End",
+    },
+    {
+      key: "frontend3",
+      title: "LESS",
+      category: "Front End",
+    },
+    {
+      key: "frontend4",
+      title: "SASS",
+      category: "Front End",
+    },
+    {
+      key: "frontend5",
+      title: "JavaScript",
+      category: "Front End",
+    },
+    {
+      key: "frontend6",
+      title: "React Js",
+      category: "Front End",
+    },
+    {
+      key: "frontend7",
+      title: "Jest",
+      category: "Front End",
+    },
+    {
+      key: "frontend8",
+      title: "Enzyme",
+      category: "Front End",
+    },
+  ];
+
+  const backEndTechStackData = [
+    {
+      key: "backend1",
+      title: "Node Js",
+      category: "Back End",
+    },
+    {
+      key: "Backend2",
+      title: "Express Js",
+      category: "Back End",
+    },
+    {
+      key: "Backend3",
+      title: "Flask - Python Web Framework",
+      category: "Back End",
+    },
+    {
+      key: "Backend4",
+      title: "Unittest - Python Standard Library",
+      category: "Back End",
+    },
+    {
+      key: "Backend5",
+      title: "Pandas - Python DataFrames",
+      category: "Back End",
+    },
+    {
+      key: "Backend6",
+      title: "Python Testing",
+      category: "Back End",
+    },
+    {
+      key: "Backend7",
+      title: "Python Web Scraping",
+      category: "Back End",
+    },
+    {
+      key: "Backend9",
+      title: "AWS Serverless",
+      category: "Event-driven Integration",
+    },
+    {
+      key: "Backend11",
+      title: "AWS API Gateway",
+      category: "API Management with Custom Authorizer",
+    },
+    {
+      key: "Backend12",
+      title: "AWS Lambda",
+      category: "Event-driven Compute",
+    },
+    {
+      key: "Backend12",
+      title: "AWS SES",
+      category: "Email Service",
+    },
+    {
+      key: "Backend12",
+      title: "AWS SQS",
+      category: "App Integration",
+    },
+    {
+      key: "Backend12",
+      title: "AWS SNS",
+      category: "App Integration",
+    },
+    {
+      key: "Backend12",
+      title: "AWS CloudWatch",
+      category: "Monitoring",
+    },
+  ];
+
+  const databaseTechStackData = [
+    {
+      key: "database0",
+      title: "AWS S3",
+      category: "Cloud Storage",
+    },
+    {
+      key: "database1",
+      title: "AWS DynamoDB",
+      category: "NoSQL Database",
+    },
+    {
+      key: "database2",
+      title: "AWS RDS",
+      category: "Relational Database",
+    },
+    {
+      key: "database3",
+      title: "Aws Athena",
+      category: "Data ETL - extract, transform, load",
+    },
+    {
+      key: "database4",
+      title: "Aws Glue",
+      category: "Data ETL - extract, transform, load",
+    },
+    {
+      key: "database5",
+      title: "AWS Quicksight",
+      category: "Business Intelligence ",
+    },
+    {
+      key: "database6",
+      title: "PySpark",
+      category: "Big Data Processor",
+    },
+  ];
   return (
     <div className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,133 +166,86 @@ function TechStack({ title }) {
             Tools I Have Been Working With
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            The combination of technologies I have used in a team setting to build and run production-level applications.
+            The combination of technologies I have used in a team setting to
+            build, run, and monitor production-level applications.
           </p>
         </div>
 
-        <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-stone-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+        <div className="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
+          <form className="group relative">
+            <svg
+              width="20"
+              height="20"
+              fill="currentColor"
+              className="absolute left-3 top-1/2 -mt-2.5 text-gray-400 pointer-events-none group-focus-within:text-stone-500"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+              />
+            </svg>
+            <input
+              className="focus:ring-2 focus:ring-stone-500 focus:outline-none w-full text-sm leading-6 text-gray-900 placeholder-gray-400 rounded-md py-2 pl-10 ring-1 ring-gray-200 shadow-sm"
+              type="text"
+              aria-label="Filter tools"
+              placeholder="Filter tools..."
+            />
+          </form>
+          <div class="grid md:grid lg:grid-cols-4 md:grid-cols-3 md:gap-x-8 md:gap-y-10 xs:grid-cols-1 sm:grid-cols-1 gap-4">
+            <div class="...">
+            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+            Front End
+          </p>
+              <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 md:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
+                {frontEndtechStackData.map((item, i) => {
+                  return (
+                    <TechList
+                      key={item.key}
+                      title={item.title}
+                      category={item.category}
                     />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Competitive exchange rates
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
+                  );
+                })}
+              </dl>
             </div>
-
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-stone-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+            <div class="... lg:col-span-2">
+            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+            Back End
+          </p>
+              <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-3 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
+                {backEndTechStackData.map((item, i) => {
+                  return (
+                    <TechList
+                      key={item.key}
+                      title={item.title}
+                      category={item.category}
                     />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  No hidden fees
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
+                  );
+                })}
+              </dl>
             </div>
-
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-stone-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
+            <div class="...">
+            <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
+            Data Management
+          </p>
+              <dl className="space-y-10 md:space-y-0 md:grid lg:grid-cols-2 lg:gap-x-8 md:gap-y-10 sm:grid sm:grid-cols-1">
+                {databaseTechStackData.map((item, i) => {
+                  return (
+                    <TechList
+                      key={item.key}
+                      title={item.title}
+                      category={item.category}
                     />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Transfers are instant
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
+                  );
+                })}
+              </dl>
             </div>
-
-            <div className="relative">
-              <dt>
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-stone-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                    />
-                  </svg>
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
-                  Mobile notifications
-                </p>
-              </dt>
-              <dd className="mt-2 ml-16 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
-              </dd>
-            </div>
-          </dl>
+          </div>
         </div>
+
+        
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCaptchaV2 from "react-google-recaptcha";
-import { IconCheck,IconError, IconX, Spin } from "./components";
+import { IconCheck, IconError, IconX, Spin } from "./components";
 
 const defaultForm = {
   from_name: "default",
@@ -69,7 +69,7 @@ function Contact({ title }) {
 
   // Adds the token to the form object
   const handleToken = (token) => {
-    setErrorMessage(null)
+    setErrorMessage(null);
     setForm((currentForm) => {
       return { ...currentForm, token };
     });

@@ -40,7 +40,7 @@ function LandingPage() {
                   rel="noreferrer"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-stone-700 bg-stone-100 hover:bg-stone-200 md:py-4 md:text-lg md:px-10"
                 >
-                  Download Resume
+                  View Resume
                 </a>
               </div>
             </div>

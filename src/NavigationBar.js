@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "./images/kw_elegant_transparent_500x500.svg";
+import logo from "./images/kw_simplywhite.svg";
 
 function NavigationBar(params) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -70,6 +70,11 @@ function NavigationBar(params) {
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="h-16 flex justify-start items-center space-x-4">
+                <Link to="/techstack">
+                  <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
+                    Tech Experiences
+                  </span>
+                </Link>
                 <Link to="/projects">
                   <span
                     className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all"
@@ -78,11 +83,7 @@ function NavigationBar(params) {
                     Featured Projects
                   </span>
                 </Link>
-                <Link to="/techstack">
-                  <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
-                    Tech Experiences
-                  </span>
-                </Link>
+
                 <Link to="/contact">
                   <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
                     Get in touch
@@ -145,16 +146,16 @@ function NavigationBar(params) {
             <a
               href="#"
               className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              aria-current="page"
             >
-              Featured Projects
+              Tech Experiences
             </a>
 
             <a
               href="#"
               className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              aria-current="page"
             >
-              Tech Experiences
+              Featured Projects
             </a>
 
             <a

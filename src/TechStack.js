@@ -139,12 +139,12 @@ function TechStack({ title }) {
     {
       key: "Backend14",
       title: "AWS SQS",
-      category: "Event-driven App Integration",
+      category: "Event-driven Queue",
     },
     {
       key: "Backend15",
       title: "AWS SNS",
-      category: "Event-driven App Integration",
+      category: "Event-driven Notification",
     },
     {
       key: "Backend16",
@@ -213,6 +213,11 @@ function TechStack({ title }) {
       key: "database6",
       title: "PySpark",
       category: "Big Data Processor",
+    },
+    {
+      key: "database7",
+      title: "AWS EMR",
+      category: "Spark Cluster Runner",
     },
   ];
 

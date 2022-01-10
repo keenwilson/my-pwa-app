@@ -8,6 +8,7 @@ import TechStack from "./TechStack";
 import "./App.css";
 
 function App() {
+  console.log("2022 Keen Wilson, Version 0.0.1");
   return (
     <BrowserRouter>
       <NavigationBar />

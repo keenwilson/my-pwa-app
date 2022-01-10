@@ -181,6 +181,11 @@ function TechStack({ title }) {
       title: "Kubernetes",
       category: "Containerization",
     },
+    {
+      key: "Backend22",
+      title: "AWS CodePipeline",
+      category: "Continuous Delivery ",
+    },
   ];
 
   const databaseTechStackData = [

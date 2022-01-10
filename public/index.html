@@ -5,7 +5,8 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <title>Keen Wilson | Progressive-Enhanced Responsive Web App</title>
+    <meta name="description" content="Full Stack Engineer (JavaScript, Python, AWS, Node.js)" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -22,8 +23,15 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     
-    <title>Pregressive-Enhanced Responsive Web App</title>
+    
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : 'your_site_key'
+        });
+      };
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

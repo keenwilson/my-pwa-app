@@ -304,8 +304,8 @@ function TechStack({ title }) {
               onChange={handleFilterTextChange}
             />
           </form>
-          <div class="grid md:grid lg:grid-cols-4 md:grid-cols-3 md:gap-x-8 md:gap-y-10 xs:grid-cols-1 sm:grid-cols-1 gap-4">
-            <div class="...">
+          <div className="grid md:grid lg:grid-cols-4 md:grid-cols-3 md:gap-x-8 md:gap-y-10 xs:grid-cols-1 sm:grid-cols-1 gap-4">
+            <div className="...">
               <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
                 Front End
               </p>
@@ -321,7 +321,7 @@ function TechStack({ title }) {
                 })}
               </dl>
             </div>
-            <div class="... lg:col-span-2">
+            <div className="... lg:col-span-2">
               <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
                 Back End
               </p>
@@ -337,7 +337,7 @@ function TechStack({ title }) {
                 })}
               </dl>
             </div>
-            <div class="...">
+            <div className="...">
               <p className="text-center my-2 text-white font-semibold text-stone-900 leading-8 tracking-tight text-base sm:text-xl">
                 Data Management
               </p>

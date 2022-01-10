@@ -78,6 +78,11 @@ function TechStack({ title }) {
       title: "Git",
       category: "Version Control",
     },
+    {
+      key: "frontend13",
+      title: "Conventional Commit Messages",
+      category: "Version Control",
+    },
   ];
 
   const backEndTechStackData = [

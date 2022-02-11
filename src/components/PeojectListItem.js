@@ -25,7 +25,7 @@ function ProjectListItem({
             <a
               href={source_url}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               aria-label={`Github ${{ title }}`}
             >
               <span className="w-full flex items-center justify-center px-1 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-stone-500 hover:bg-stone-400 md:py-1 md:text-base md:px-2">
@@ -40,7 +40,7 @@ function ProjectListItem({
               <a
                 href={preview_url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
                 aria-label={`${{ title }} Page`}
               >
                 <span className="w-full flex items-center justify-center px-1 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-stone-500 hover:bg-stone-400 md:py-1 md:text-base md:px-2">

@@ -64,22 +64,22 @@ function TechStack({ title }) {
       category: "Web Security",
     },
     {
-      key: "frontend10",
+      key: "frontend13",
       title: "Grunt",
       category: "Build Tool",
     },
     {
-      key: "frontend11",
+      key: "frontend14",
       title: "Webpack",
       category: "Build Tool",
     },
     {
-      key: "frontend12",
+      key: "frontend15",
       title: "Git",
       category: "Version Control",
     },
     {
-      key: "frontend13",
+      key: "frontend16",
       title: "Conventional Commit Messages",
       category: "Version Control",
     },
@@ -301,8 +301,8 @@ function TechStack({ title }) {
               aria-hidden="true"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
               />
             </svg>
@@ -323,7 +323,7 @@ function TechStack({ title }) {
                 {filteredFrontEnd.map((item, i) => {
                   return (
                     <TechList
-                      key={item.key}
+                      componentKey={item.key}
                       title={item.title}
                       category={item.category}
                     />
@@ -339,7 +339,7 @@ function TechStack({ title }) {
                 {filteredBackEnd.map((item, i) => {
                   return (
                     <TechList
-                      key={item.key}
+                      componentKey={item.key}
                       title={item.title}
                       category={item.category}
                     />
@@ -355,7 +355,7 @@ function TechStack({ title }) {
                 {filteredDatabase.map((item, i) => {
                   return (
                     <TechList
-                      key={item.key}
+                      componentKey={item.key}
                       title={item.title}
                       category={item.category}
                     />

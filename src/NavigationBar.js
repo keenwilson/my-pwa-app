@@ -65,7 +65,11 @@ function NavigationBar(params) {
             <div className="flex-shrink-0 flex items-center">
               <Link to="/">
                 <span className="sr-only">Keen Wilson Logo</span>
-                <img alt="" className="h-8 w-auto sm:h-10" src={logo} />
+                <img
+                  alt="Keen Wilson Logo"
+                  className="h-8 w-auto sm:h-10"
+                  src={logo}
+                />
               </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
@@ -86,7 +90,7 @@ function NavigationBar(params) {
 
                 <Link to="/contact">
                   <span className="text-stone-700 hover:bg-stone-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all">
-                    Get in touch
+                    Get in Touch
                   </span>
                 </Link>
               </div>
@@ -112,7 +116,7 @@ function NavigationBar(params) {
             </Link>
             <Link to="/contact">
               <span className="text-stone-700 hover:bg-stone-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Get in touch
+                Get in Touch
               </span>
             </Link>
           </div>
